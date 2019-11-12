@@ -59,7 +59,9 @@ function timeLeft() {
           timeDisplay.textContent = ("Time: " + timer);
       }, 1000)
       if (timer <= 0) {
+          timer = 0;
           clearInterval(timerInterval);
+          alert("Times Up")
       }
 }
 
@@ -74,24 +76,23 @@ function nextQuestion() {
 
 questionCard.addEventListener("click", function(event){
     var element = event.target;
-  
     if (element.matches("button") === true) {
         var answer = element.textContent;
         // console.log(answer);
         // console.log("answer" + questions[i].answer);
         if (answer == questions[i].answer) {
             alert("Correct. Your a Coding Wizard");
-            timer = + 10;
+            timer = timer + 10;
             nextQuestion ();
         }
         else {
             alert("NOPE")
-            timer = - 10;
+            timer = timer - 10;
             nextQuestion ();
         } 
     }
-    
 })
+
 
 
 
