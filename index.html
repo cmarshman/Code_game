@@ -1,21 +1,21 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1,  shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
+  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/png" href="https://www.resilience.org/wp-content/uploads/2018/07/supporter-avatar-13c-200x200.png"/>
+    <link rel="stylesheet" href="style.css"/>
     <title>Code Test</title>
   </head>
   <body>
     <div class="topBar">
-      <buton id="viewHighScores">View High Scores</buton>
+      <buton id="viewScores">View High Scores</buton>
       <div id="timer" class="text-right">Time: 75</div>
     </div>
-    <div class="jumbotron">
+    <div class="jumbotron" id="begin">
       <h1 class="display-4 text-center">Coding Quiz Challenge</h1>
       <p class="lead text-center">Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score and time. 10 seconds will be removed for incorect answers.</p>
       <hr class="my-4">
@@ -24,17 +24,20 @@
       </p>
       <a class="btn btn-primary btn-lg" href="#" role="button" id="startQuiz">Start Quiz</a>
     </div>
-    <div class="card-body" id="qustioncCard">
+    <div class="jumbotron" id="questionCard">
       <h1 class="display-4" id="questNumber"></h1>
-      <p class="Lead" id="titles"></p>
-      <div id="choice" onClick=nextQuestion()><button id="buttonA"></button></div>
-      <div id="choice" onClick=nextQuestion()><button id="buttonB"></button></div>
-      <div id="choice" onClick=nextQuestion()><button id="buttonC"></button></div>
-      <div id="choice" onClick=nextQuestion()><button id="buttonD"></button></div>
+      <p class="lead" id="titles"></p>
+      <div id="choice"><button id="buttonA"></button></div>
+      <div id="choice"><button id="buttonB"></button></div>
+      <div id="choice"><button id="buttonC"></button></div>
+      <div id="choice"><button id="buttonD"></button></div>
     </div>
+
+
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
   </body>
 </html>
